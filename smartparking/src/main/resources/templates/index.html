@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+    <title>Smart Park - Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Rubik', sans-serif;
+            background: linear-gradient(120deg, #f0faff, #e9f7ff);
+            color: #333;
+        }
+
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(6px);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fcff;
+  color: #333;
+}
+
+
+.btn-modern {
+  background: linear-gradient(to right, #74ebd5, #9face6);
+  color: #fff;
+  padding: 14px 32px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  transition: all 0.4s ease;
+  font-weight: 600;
+}
+
+.btn-modern:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+
+        .navbar .nav-link {
+            color: #333 !important;
+            font-weight: 500;
+        }
+
+        /* 🌙 Dark Mode Styling */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .navbar {
+  background-color: #1f1f1f !important;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+.contact-section {
+  background-color: #f6f9fc;  /* Same as Stay Connected section */
+  padding: 80px 0;
+}
+
+
+.contact-section h2 {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #1c1c2d;
+  margin-bottom: 20px;
+}
+
+.contact-section p,
+.contact-section label {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+
+
+.pulse-btn {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: white;
+  box-shadow: 0 0 20px #00c6ff;
+  transition: all 0.4s ease;
+  animation: pulse 2s infinite;
+}
+
+.pulse-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+  box-shadow: 0 0 30px #00c6ff, 0 0 40px #0072ff;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 198, 255, 0.7); }
+  70% { box-shadow: 0 0 0 20px rgba(0, 198, 255, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 198, 255, 0); }
+}
+
+.dark-mode .nav-link {
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .nav-link:hover {
+  color: #00bfff !important;
+}
+
+.dark-mode .hero,
+.dark-mode section,
+.dark-mode footer {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+}
+
+.dark-mode .icon-box {
+  background-color: #2b2b2b;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+
+        .navbar .nav-link:hover {
+            color: #0d6efd !important;
+        }
+
+        .hero {
+            padding: 120px 20px;
+            text-align: center;
+            background: linear-gradient(to right, #e0f2ff, #cfe9ff);
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            font-weight: 800;
+            color: #1c1c2d;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* 🌙 Full Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.dark-mode .navbar {
+  background-color: #1f1f1f !important;
+  box-shadow: 0 2px 8px rgba(255,255,255,0.1);
+}
+
+.dark-mode .nav-link {
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .nav-link:hover {
+  color: #00bfff !important;
+}
+
+.dark-mode .hero,
+.dark-mode section,
+.dark-mode footer {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1;
+}
+
+.dark-mode .section-title {
+  color: #00e0ff;
+}
+
+.dark-mode .text-muted {
+  color: #ccc !important;
+}
+
+/* ✨ Universal glow hover effect */
+.glow-hover:hover {
+  box-shadow: 0 0 15px #00e0ff, 0 0 25px #00bfff;
+  transform: scale(1.03);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🌟 Smooth scale effect on hover */
+.scale-hover:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+
+.dark-mode .icon-box {
+  background-color: #2b2b2b;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.dark-mode .btn,
+.dark-mode .btn-glow {
+  background-color: #0072ff;
+  color: white;
+  border: none;
+}
+
+.dark-mode .btn:hover,
+.dark-mode .btn-glow:hover {
+  background-color: white;
+  color: #0072ff;
+  box-shadow: 0 0 10px #00e0ff;
+}
+
+.dark-mode input,
+.dark-mode textarea,
+.dark-mode .form-control {
+  background-color: #2b2b2b;
+  color: white;
+  border: 1px solid #555;
+}
+
+.dark-mode input::placeholder,
+.dark-mode textarea::placeholder {
+  color: #bbb;
+}
+
+.dark-mode .accordion-button {
+  background-color: #2b2b2b;
+  color: #f1f1f1;
+}
+
+.dark-mode .accordion-button:not(.collapsed) {
+  background-color: #3b3b3b;
+  color: #00e0ff;
+}
+
+.navbar {
+  padding: 10px 24px;
+}
+
+.btn-glow {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+
+.navbar {
+  background: rgba(255, 255, 255, 0.85); /* Transparent white */
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(0, 198, 255, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 198, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .nav-link {
+  color: #0072ff !important;
+  font-weight: 600;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  transition: width 0.3s;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar .nav-link:hover {
+  color: #00c6ff !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  color: #00c6ff !important;
+  font-size: 1.5rem;
+  text-shadow: 0 0 5px rgba(0,198,255,0.5);
+}
+.dark-mode .navbar {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid rgba(0, 198, 255, 0.2);
+}
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.8rem;
+  color: #0d6efd !important;  /* Bootstrap primary blue (light) */
+  text-shadow: none;
+  transition: color 0.3s ease;
+}
+
+
+.dark-mode .nav-link {
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .nav-link:hover {
+  color: #00c6ff !important;
+}
+
+
+.about-section {
+  background: linear-gradient(to right, #f0faff, #e9f7ff);
+  padding: 80px 0;
+}
+
+.about-section .section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1c1c2d;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.about-img {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+
+.about-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+
+
+/* Dark Mode Support */
+.dark-mode .about-section {
+  background-color: #1e1e1e;
+}
+
+.dark-mode .about-section .section-title {
+  color: #00e0ff;
+}
+
+.dark-mode .about-section p {
+  color: #ccc;
+}
+
+.dark-mode .accordion-body {
+  background-color: #1f1f1f;
+  color: #f1f1f1;
+}
+
+.stay-connected-section {
+  background-color: #f6f9fc; /* light grey, matches Contact section */
+  padding: 70px 0;
+  color: #1c1c2d;
+}
+/* 🌙 Dark mode fix for Benefits box */
+.dark-mode .bg-white {
+  background-color: #2b2b2b !important; /* dark grey box */
+  color: #f1f1f1 !important;            /* white text */
+}
+
+.dark-mode .bg-white h5,
+.dark-mode .bg-white span {
+  color: #f1f1f1 !important;
+}
+
+.dark-mode .bg-white i {
+  color: inherit; /* keep icon color (primary/success/danger) */
+}
+
+/* Optional: shadow soft white in dark mode */
+.dark-mode .shadow-sm {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05) !important;
+}
+
+
+        .animate-fade { animation: fadeIn 1.2s ease-in-out; }
+.animate-bounce { animation: bounce 1.2s infinite; }
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+
+        .btn-glow {
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(135deg, #00bfff, #0072ff);
+            color: white;
+            box-shadow: 0 0 12px #00bfff;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .btn-glow:hover {
+            background: white;
+            color: #0072ff;
+            box-shadow: 0 0 20px #00c6ff;
+        }
+
+        /* Ola Style Glow Hover */
+.glow-hover:hover {
+  box-shadow: 0 0 15px #00ffc3, 0 0 25px #00e0ff;
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+/* Animate Bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-bounce {
+  animation: bounce 1.5s infinite;
+}
+
+
+        .section-title {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            animation: fadeIn 1s ease;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+
+
+   .hero-section {
+  position: relative;
+  background-image: url('images/index.jpg');  /* ✅ Local image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  z-index: 1;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);  /* ✅ Light overlay */
+  z-index: -1;
+}
+
+
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  border-right: .15em solid #0072ff;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: .05em;
+  font-weight: 800;
+  font-size: 2.2rem;
+  animation: typing 2.8s steps(33, end) forwards, blink-caret 0.75s step-end infinite;
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .typewriter {
+    font-size: 1.8rem;
+    width: 90%;
+  }
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 18.5em; }  /* 👈 Tera actual text width yahan define hoga */
+}
+
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #0072ff; }
+}
+
+
+        .icon-box {
+            padding: 30px;
+            border-radius: 12px;
+            background-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: fadeInUp 1s ease;
+        }
+
+        .icon-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+        }
+
+
+  .glow-box {
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 123, 255, 0.4); /* soft blue glow */
+    transition: box-shadow 0.3s ease;
+  }
+
+  .glow-box:hover {
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.7); /* strong on hover */
+  }
+
+  .glow-dot-green {
+    color: #28a745;
+    text-shadow: 0 0 4px #28a745;
+  }
+
+  .glow-dot-red {
+    color: #dc3545;
+    text-shadow: 0 0 4px #dc3545;
+  }
+
+.map-logo-container {
+  width: 42px;  /* 👈 Adjusted to fit navbar */
+  height: 42px;
+  margin: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: glow-pulse 2.2s infinite ease-in-out;
+}
+
+/* Logo itself */
+.map-logo {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+  filter: drop-shadow(0 0 5px #00f6ff) drop-shadow(0 0 8px #00f6ff);
+}
+
+/* Animation for glowing pulse effect */
+@keyframes glow-pulse {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px #00f6ff);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px #00f6ff);
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px #00f6ff);
+  }
+}
+
+
+
+
+        footer {
+            background-color: #e8f4ff;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.95rem;
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top px-4">
+    <div class="map-logo-container">
+        <svg class="map-logo" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#4285F4" d="M32 0C26 0 20 2.3 15.6 6.4L32 22.8V0z"/>
+            <path fill="#34A853" d="M32 0v22.8l16.4-16.4C44 2.3 38 0 32 0z"/>
+            <path fill="#FBBC04" d="M15.6 6.4C11.6 10 9.2 15.1 9.2 20.8c0 6.5 2.6 12.3 6.9 16.6L32 64V22.8L15.6 6.4z"/>
+            <path fill="#EA4335" d="M48.8 20.8c0-5.7-2.4-10.8-6.4-14.4L32 22.8V64l15.9-26.6c4.4-4.3 6.9-10.1 6.9-16.6z"/>
+            <circle cx="32" cy="20" r="6" fill="white"/>
+        </svg>
+    </div>
+
+
+    <a class="navbar-brand fw-bold" href="#">ParkIn</a>
+    <li class="nav-item d-flex align-items-center ms-3">
+        <i class="bi bi-brightness-high fs-5 me-2" id="theme-icon"></i>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="themeToggle">
+        </div>
+    </li>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item scale-hover"><a class="nav-link" href="#hero">Home</a></li>
+            <li class="nav-item scale-hover"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item scale-hover"><a class="nav-link" href="#services">Services</a></li>
+            <li class="nav-item scale-hover"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item">
+
+                <a href="login" class="btn-glow"> Login/Register</a>
+
+            </li>
+
+
+        </ul>
+    </div>
+</nav>
+
+
+
+<!-- Hero Section -->
+<!-- 💪 Hero Section with Dark Car Background -->
+<section class="hero-section">
+    <div class="container">
+        <h1 class="typewriter">Find and Book Parking Instantly</h1>
+
+        <p>Smart, Fast and Secure — Anywhere in your city</p>
+        <a href="login"  class="btn-glow">Get Started</a>
+        >
+    </div>
+
+</section>
+
+
+<!-- Floating Glowing Location Box -->
+<div class="position-relative" style="z-index: 10;">
+    <div class="container position-absolute top-100 start-50 translate-middle" style="margin-top: -60px;">
+        <div class="row justify-content-center gap-3">
+            <div class="col-md-4 bg-white border glow-box d-flex align-items-center justify-content-between p-3">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-circle-fill glow-dot-green"></i>
+                    <span class="fw-semibold">Current Location</span>
+                </div>
+                <i class="bi bi-crosshair text-secondary"></i>
+            </div>
+            <div class="col-md-4 bg-white border glow-box d-flex align-items-center justify-content-start p-3">
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-circle-fill glow-dot-red"></i>
+                    <span class="fw-semibold">Enter Location</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- About Section -->
+<section id="about" class="about-section py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <!-- Left: Content -->
+            <div class="col-md-6 animate-fade">
+                <h2 class="section-title mb-4">About Smart Park</h2>
+                <p class="lead">
+                    Smart Park is an intelligent vehicle parking system designed to reduce the hassle of finding parking slots in urban areas.
+                    Our online booking system  platform ensures safe, efficient, and real-time booking of parking spots for cars, bikes, and buses.
+                </p>
+                <p>
+                    Whether you're commuting daily or going on a trip, Smart Park makes sure your vehicle is parked safely. Our system is fast, reliable, and user-friendly.
+                </p>
+                <a href="#contact" class="btn btn-glow mt-4">Contact Us</a>
+            </div>
+
+            <!-- Right: Image -->
+            <div class="col-md-6 text-center animate-fade">
+
+
+                <img src="images/about-car.png" alt="Smart Car Parking" class="img-fluid about-img scale-hover" style="max-height: 380px;" />
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Services Section -->
+<section id="services" class="text-center">
+    <div class="container">
+        <h2 class="section-title">Our Key Features</h2>
+        <div class="row g-4 mt-4">
+            <div class="col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-clock-history display-4 text-primary mb-3"></i>
+                    <h5>Live Slot Updates</h5>
+                    <p>View available parking slots in real-time across city areas.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-shield-lock-fill display-4 text-success mb-3"></i>
+                    <h5>Secure Login & Booking</h5>
+                    <p>Role-based login for users/admins and fully protected booking.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="icon-box">
+                    <i class="bi bi-device-ssd display-4 text-warning mb-3"></i>
+                    <h5>Responsive Design</h5>
+                    <p>Use Smart Park seamlessly on mobile, tablet or desktop devices.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<!-- Advance Booking Section -->
+<section id="advance-booking" class="py-5 bg-light">
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <!-- Left Box -->
+            <div class="col-md-7">
+                <div class="bg-info p-5 rounded-4 text-white">
+                    <h2 class="fw-bold">Get your ride right<br>with Smart Park Reserve</h2>
+                    <p class="mt-3">Choose date and time</p>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-calendar-date"></i></span>
+                                <input type="date" class="form-control" id="booking-date" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group">
+                                <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                                <input type="time" class="form-control" id="booking-time" required>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <!-- Right Benefits -->
+            <div class="col-md-5">
+                <div class="bg-white p-4 rounded-4 shadow-sm">
+                    <h5 class="fw-bold">Benefits</h5>
+                    <ul class="list-unstyled mt-3">
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="bi bi-calendar-event me-2 fs-5 text-primary"></i>
+                            <span>Choose your exact parking time up to 90 days in advance.</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="bi bi-clock-history me-2 fs-5 text-success"></i>
+                            <span>Extra wait time included to match your arrival.</span>
+                        </li>
+                        <li class="mb-3 d-flex align-items-start">
+                            <i class="bi bi-credit-card-2-back me-2 fs-5 text-danger"></i>
+                            <span>Cancel anytime up to 60 minutes in advance — no charge.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ratings Section -->
+<section id="ratings" class="text-center bg-white">
+    <div class="container">
+        <h2 class="section-title">User Ratings</h2>
+        <p class="text-muted">Our users love Smart Park. Here's what they say:</p>
+        <div class="row g-4 mt-4">
+            <div class="col-md-4 d-flex">
+                <div class="icon-box flex-fill d-flex flex-column justify-content-between align-items-center text-center">
+                    <p>“Very easy to book and park. Love the interface!”</p>
+                    <div class="text-warning fs-4">★★★★★</div>
+                    <small class="mt-2">- Abhay Kushwaha</small>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="icon-box flex-fill d-flex flex-column justify-content-between align-items-center text-center">
+                    <p>“Helped me avoid long searches in busy areas.”</p>
+                    <div class="text-warning fs-4">★★★★☆</div>
+                    <small class="mt-2">- Deepak Kumar</small>
+                </div>
+            </div>
+            <div class="col-md-4 d-flex">
+                <div class="icon-box flex-fill d-flex flex-column justify-content-between align-items-center text-center">
+                    <p>“Admin dashboard is very powerful and clean.”</p>
+                    <div class="text-warning fs-4">★★★★★</div>
+                    <small class="mt-2">- Vishal Maurya</small>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Help Section -->
+<!-- Help Section -->
+<section id="help" class="text-center bg-light">
+    <div class="container">
+        <h2 class="section-title">Help & FAQ</h2>
+        <div class="accordion accordion-flush" id="faqAccordion">
+
+            <!-- Q1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne">
+                        How to book a parking slot?
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">You can log in and book available slots from the live map view or list.</div>
+                </div>
+            </div>
+
+            <!-- Q2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo">
+                        Can I cancel a booking?
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes, up to 30 minutes before your scheduled time.</div>
+                </div>
+            </div>
+
+            <!-- Q3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree">
+                        Is registration required to use the service?
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Yes, users must register and log in to access booking features.</div>
+                </div>
+            </div>
+
+            <!-- Q4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour">
+                        How can I see available parking slots?
+                    </button>
+                </h2>
+                <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">Available slots are displayed on the dashboard in real-time.</div>
+                </div>
+            </div>
+
+            <!-- Q5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive">
+                        Who can I contact for support?
+                    </button>
+                </h2>
+                <div id="flush-collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">You can contact our support team via the 'Contact Us' section for help.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Form Section -->
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="section-title text-center">Contact Us</h2>
+        <p class="text-center mb-4">Feel free to reach out for any inquiries or support.</p>
+
+        <form class="row g-3 just0ify-content-center"  id="contactForm">
+            <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control"  name="name" id="name" placeholder="Your Name">
+            </div>
+            <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email">
+            </div>
+            <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="4" placeholder="Write your message here..."></textarea>
+            </div>
+            <div class="col-12 text-center">
+                <button type="submit" class="btn-glow mt-3">Send Message</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<!-- advance footer -->
+<section class="stay-connected-section text-center">
+    <div class="container">
+        <h2 class="section-title">Stay Connected</h2>
+        <p class="mb-4">Get latest updates, offers and more. Follow us or subscribe to our newsletter.</p>
+
+        <form onsubmit="return subscribe(event)" class="d-flex justify-content-center gap-2 flex-wrap">
+            <input type="email" name="email" id="subscriber-email" class="form-control w-50" placeholder="Enter your email" required>
+            <button type="submit" class="btn-glow">Subscribe</button>
+        </form>
+
+
+
+        <div class="mt-4">
+            <a href="#" class="me-3"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#" class="me-3"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="text-center bg-white">
+    <div class="container">
+        <h2 class="section-title">Support</h2>
+        <p>Email: support@smartpark.com | Phone: +91-8922869580</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <i class="bi bi-facebook fs-4 glow-hover"></i>
+
+    &copy; 2025 Smart Park. All Rights Reserved.
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    const toggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const icon = document.getElementById('theme-icon');
+
+    toggle.addEventListener('change', function () {
+      if (this.checked) {
+        body.classList.add('dark-mode');
+        icon.classList.replace('bi-brightness-high', 'bi-moon-stars-fill');
+      } else {
+        body.classList.remove('dark-mode');
+        icon.classList.replace('bi-moon-stars-fill', 'bi-brightness-high');
+      }
+    });
+</script>
+
+
+
+</body>
+</html>
